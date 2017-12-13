@@ -36,9 +36,9 @@ bindsym $mod+Return exec ${terminal}
 bindsym $mod+t exec i3-sensible-terminal
 
 # volume keys
-bindsym XF86AudioMute exec "amixer set Master mute"
-bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
-bindsym XF86AudioLowerVolume exec "amixer set Master 5%-"
+bindsym XF86AudioMute exec "amixer set Master playback 0% mute"
+bindsym XF86AudioRaiseVolume exec "amixer set Master playback 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer set Master playback 5%- unmute"
 
 # brightness keys
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 20; ${pkgs.libnotify}/bin/notify-send 'brightness up'"

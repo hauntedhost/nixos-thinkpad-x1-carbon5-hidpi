@@ -123,6 +123,7 @@ in
     chromium = {
       enableGoogleTalkPlugin = true;
       enableAdobeFlash = true;
+      # enableWideVine = true;
       # commandLineArgs = "--force-device-scale-factor=2";
     };
     
