@@ -32,7 +32,8 @@ in
   networking = {
     hostName = "nixos"; # Define your hostname.
     wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    # networkmanager.enable = true;
+    enableIPv6 = true;
+    #networkmanager.enable = true;
   };
 
   # Select internationalisation properties.
@@ -67,10 +68,11 @@ in
       anki
       aria2
       atom
+      bash-completion
       borgbackup
       chromium
       curl
-      dropbox-cli
+      dropbox
       ffmpeg
       firefox
       gcc
@@ -78,15 +80,18 @@ in
       gitAndTools.gitFull
       gnupg
       google-chrome
+      hstr
       htop
       httpie
       imagemagick
       keybase
       keybase-gui
       meld
+      mupdf
       networkmanager
       nix-repl
       nmap
+      nnn
       ripgrep
       rlwrap
       rxvt_unicode-with-plugins
@@ -179,6 +184,7 @@ in
     # Enable touchpad support.
     libinput = {
       enable = true;
+      clickMethod = "clickfinger";
       disableWhileTyping = true;
       naturalScrolling = true;
       scrollMethod = "twofinger";
